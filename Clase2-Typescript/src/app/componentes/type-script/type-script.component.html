@@ -1,0 +1,28 @@
+<h1>type-script works!</h1>
+<h2>Mi nombre es : {{nombre}}</h2>
+<p>Mayor de Edad: {{mayorEdad}}</p>
+<p>Edad: {{edad}}</p>
+<p>Nombre Segundo: {{nombreSegundo}}</p>
+<p>NUll: {{variable2}}</p>
+<p>ANY: {{variable3}}</p>
+<p>Frutas:{{frutas}}</p>
+<p>Fruta: {{fruta.nombre}} | {{fruta.color}} |
+  {{fruta.pesoGramos}}gr | {{fruta.sabor}}| {{fruta.caducada}}</p>
+
+<!--<p>{{VenderONoVender()}}</p>-->
+
+<!--@if (fruta.caducada) {-->
+<!--<p>No Vender</p>-->
+<!--} @else {-->
+<!--  <p>Vender</p>-->
+<!--}-->
+
+<p>{{fruta.caducada? 'No Vender' : 'Vender'}}</p>
+
+<ul>
+  @for (sabor of fruta.sabor ; track $index) {
+    <li>{{sabor}}</li>
+  }
+</ul>
+
+<h4>Nota Final: {{notaFinalPromedio(notas)}}</h4>
