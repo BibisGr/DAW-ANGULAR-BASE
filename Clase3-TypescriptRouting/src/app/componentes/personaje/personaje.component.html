@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="row p-2">
+    <div class="col-12 m-auto">
+      <div class="d-flex">
+        <div class="col-6 m-2">
+        <img src="{{sailorMoon.url_image}}" class="card-img-top"
+             alt="{{sailorMoon.nombre_guerrera}}">
+        </div>
+        <div class="col-6 m-2 card-body">
+          <h5 class="card-title">{{ sailorMoon.nombre_guerrera }}</h5>
+          <p class="card-text">Nombre: {{sailorMoon.nombre_civil}}</p>
+          <p class="card-text">Personalidad: {{sailorMoon.personalidad}}</p>
+          <p class="card-text">Cuerpo Celeste: {{sailorMoon.cuerpo_celeste_de_Origen}}</p>
+          <p class="card-text">Edad: {{sailorMoon.edad}}</p>
+          <p class="card-text">Poderes: {{sailorMoon.poderes}}</p>
+          <p class="card-text">Transformaciones: {{sailorMoon.transformaciones}}</p>
+          <p class="card-text">Aliados: {{sailorMoon.aliados}}</p>
+          <p class="card-text">Enemigos: {{sailorMoon.enemigos}}</p>
+          <p class="card-text">Estado: {{sailorMoon.estado? 'Vivo': 'Muerto'}}</p>
+          <h5>Armas</h5>
+          @for (arma of sailorMoon.armas; track arma.name) {
+            <p class="card-text"> {{arma.name}} - ATAQUE: {{arma.ataque}} - EFECTIVIDAD: {{arma.efectividad}}</p>
+          }
+          <h5>Habilidades</h5>
+          @for (habilidad of sailorMoon.habilidades; track habilidad.name) {
+            <p class="card-text"> {{habilidad.name}} - ATAQUE: {{habilidad.ataque}} - EFECTIVIDAD: {{habilidad.efectividad}}</p>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
